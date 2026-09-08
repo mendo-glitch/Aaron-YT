@@ -53,3 +53,14 @@ def page(body, extra_css=""):
     return f'''<html><head><meta charset="utf-8">
 <link rel="stylesheet" href="base.css"><style>{extra_css}</style></head>
 <body><div class="frame"><div class="wall"></div>{shelves()}{body}</div></body></html>'''
+
+
+def photo_page(body, extra_css=""):
+    """Compose over a graded frame from the episode instead of the CSS plate."""
+    return f'''<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><style>
+.frame{{background:#CFC3B2;}}
+.plate{{position:absolute;inset:0;width:1280px;height:720px;}}
+.head{{text-shadow:0 12px 34px rgba(0,0,0,.62),0 4px 12px rgba(0,0,0,.5);}}
+{extra_css}</style></head>
+<body><div class="frame"><img class="plate" src="plate-photo.png">{body}</div></body></html>'''
