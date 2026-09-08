@@ -1,0 +1,50 @@
+@font-face{font-family:'ArchivoBlack';src:url('fonts/ArchivoBlack.ttf')format('truetype');}
+@font-face{font-family:'Anton';src:url('fonts/Anton.ttf')format('truetype');}
+@font-face{font-family:'Inter9';src:url('fonts/Inter900.ttf')format('truetype');font-weight:900;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:1280px;height:720px;overflow:hidden;}
+.frame{position:relative;width:1280px;height:720px;overflow:hidden;background:#CFC3B2;}
+
+/* ---------- STUDIO PLATE : warm cream brick + wood floating shelves ---------- */
+.wall{position:absolute;inset:0;
+  background:
+    linear-gradient(115deg,rgba(255,252,246,.55) 0%,rgba(255,250,240,0) 42%),
+    repeating-linear-gradient(0deg,rgba(120,100,78,.13) 0 1px,transparent 1px 46px),
+    repeating-linear-gradient(90deg,rgba(120,100,78,.10) 0 1px,transparent 1px 96px),
+    linear-gradient(160deg,#E4DACA 0%,#D5C8B4 45%,#BFB09A 100%);}
+.wall:after{content:'';position:absolute;inset:0;
+  background:radial-gradient(120% 95% at 32% 34%,rgba(255,250,238,.42) 0%,rgba(255,250,238,0) 55%),
+             radial-gradient(130% 110% at 50% 108%,rgba(40,28,16,.42) 0%,rgba(40,28,16,0) 62%);}
+.shelf{position:absolute;height:15px;border-radius:2px;
+  background:linear-gradient(180deg,#B98B57 0%,#9A6F41 55%,#7C5730 100%);
+  box-shadow:0 16px 26px rgba(48,32,16,.34);}
+.obj{position:absolute;bottom:15px;}
+.bk{position:absolute;bottom:15px;border-radius:2px 3px 3px 2px;
+  box-shadow:inset -3px 0 0 rgba(0,0,0,.16);}
+.vase{position:absolute;bottom:15px;border-radius:44% 44% 30% 30%/38% 38% 22% 22%;
+  background:linear-gradient(150deg,#6E6257,#443C34);box-shadow:0 5px 10px rgba(0,0,0,.22);}
+.bowl{position:absolute;bottom:15px;border-radius:50% 50% 46% 46%/34% 34% 66% 66%;
+  background:linear-gradient(150deg,#CFC6B6,#A79C8B);}
+.plant{position:absolute;bottom:15px;}
+.leaf{position:absolute;width:13px;height:40px;border-radius:60% 60% 55% 55%;
+  background:linear-gradient(180deg,#6F8F5E,#3F5A34);transform-origin:50% 100%;}
+.frm{position:absolute;bottom:15px;background:#EDE6D8;border:5px solid #6B5744;
+  box-shadow:0 5px 11px rgba(0,0,0,.22);}
+
+/* ---------- SUBJECT : neutral stand-in, Aaron's mid-shot blocking ---------- */
+.subj{position:absolute;bottom:0;z-index:2;filter:drop-shadow(0 22px 42px rgba(30,20,10,.42));}
+
+/* ---------- TYPE SYSTEM ---------- */
+.badge{position:absolute;z-index:4;display:inline-block;padding:10px 22px 11px;border-radius:7px;
+  background:#E16E69;color:#fff;font-family:'Inter9',sans-serif;font-weight:900;
+  font-size:27px;letter-spacing:.155em;text-transform:uppercase;
+  box-shadow:0 9px 20px rgba(0,0,0,.30);}
+.head{position:absolute;z-index:3;font-family:'ArchivoBlack',sans-serif;color:#fff;
+  line-height:.86;letter-spacing:-.018em;text-transform:uppercase;
+  text-shadow:0 10px 30px rgba(0,0,0,.52),0 3px 9px rgba(0,0,0,.40);}
+.head.anton{font-family:'Anton',sans-serif;letter-spacing:.004em;line-height:.90;}
+.head.title-case{text-transform:none;}
+.bar{position:absolute;z-index:2;background:#E16E69;border-radius:4px;
+  box-shadow:0 9px 22px rgba(0,0,0,.26);}
+.mega{position:absolute;z-index:1;font-family:'ArchivoBlack',sans-serif;color:#E16E69;
+  line-height:.80;letter-spacing:-.045em;}

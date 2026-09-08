@@ -1,0 +1,5 @@
+fonts/
+*.png
+*.raw.png
+proof.html
+__pycache__/
