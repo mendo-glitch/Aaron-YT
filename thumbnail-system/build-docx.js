@@ -5,7 +5,7 @@ const {
 } = require("docx");
 
 const T = "/home/user/Aaron-YT/thumbnail-system";
-const NAVY = "0E2A47", GREY = "777777", GREEN = "2E7D32";
+const WARM = "4A3F36", GREY = "8A7F73", GREEN = "2E7D32";
 const ARIAL = "Arial";
 
 const disclaimer = fs.readFileSync(
@@ -16,7 +16,7 @@ const tagCount = tags.split(",").length, tagChars = tags.length;
 
 const h = (t) => new Paragraph({
   spacing: { before: 260, after: 130 },
-  children: [new TextRun({ text: t, bold: true, size: 32, font: ARIAL, color: NAVY })],
+  children: [new TextRun({ text: t, bold: true, size: 32, font: ARIAL, color: WARM })],
 });
 const body = (t, o = {}) => new Paragraph({
   spacing: { after: o.after ?? 110 },
@@ -84,7 +84,7 @@ const doc = new Document({
     children: [
       new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 200 },
         children: [new TextRun({ text: "5 Signs You're Not Ready to Retire — YouTube Packaging",
-          bold: true, size: 36, font: ARIAL, color: NAVY })] }),
+          bold: true, size: 36, font: ARIAL, color: WARM })] }),
 
       h("Title Options"),
       txt("Search = how closely the title matches what a retirement viewer actually types into YouTube (1–10).   Len = character count; green stays visible on mobile.",
