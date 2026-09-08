@@ -20,7 +20,7 @@ SHADOW = 'filter:drop-shadow(0 8px 18px rgba(0,0,0,.45));'
 def c1():
     marks = "".join(
         (check if i < 2 else cross)(636 + i * (MARK_W + 22), 462) for i in range(5))
-    body = (subject(left=64, h=540)
+    body = (subject(left=44, h=610)
             + '<div class="badge" style="left:636px;top:108px;">Retirement</div>'
             + '<div class="head" style="left:632px;top:196px;font-size:118px;">ARE YOU<br>READY?</div>'
             + f'<div style="{SHADOW}">{marks}</div>')
@@ -39,7 +39,7 @@ def c2():
               '<div style="position:absolute;left:872px;top:494px;width:336px;text-align:center;'
               'font-family:Inter9,sans-serif;font-weight:900;font-size:25px;letter-spacing:.15em;'
               'color:#FFFFFF;text-shadow:0 4px 12px rgba(0,0,0,.4)">LIFE</div>')
-    body = (subject(left=64, h=540)
+    body = (subject(left=44, h=610)
             + '<div class="head" style="left:632px;top:168px;font-size:84px;">ONLY 2<br>ARE ABOUT<br>MONEY</div>'
             + segs + labels)
     return page(body)
@@ -47,7 +47,7 @@ def c2():
 
 # 3 — Alt. Underline-bar treatment, title case. Judgment-adjacent.
 def c3():
-    body = (subject(left=96, h=560)
+    body = (subject(left=52, h=620)
             + '<div class="bar" style="left:610px;top:366px;width:520px;height:34px;"></div>'
             + '<div class="head title-case" style="left:616px;top:252px;font-size:100px;'
               'letter-spacing:-.022em;">Still<br>not ready</div>')
@@ -56,7 +56,7 @@ def c3():
 
 # 4 — Alt. Curiosity / omission: leans on the three non-money signs.
 def c4():
-    body = (subject(left=64, h=530)
+    body = (subject(left=44, h=600)
             + '<div class="badge" style="left:640px;top:120px;">Before You Retire</div>'
             + '<div class="head" style="left:636px;top:200px;font-size:126px;">THE 3<br>NOBODY<br>PLANS FOR</div>')
     return page(body)

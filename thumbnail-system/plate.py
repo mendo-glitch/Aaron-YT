@@ -33,8 +33,14 @@ def shelves():
 
 
 def subject(left=96, h=520, tone="#4A3F36"):
-    """Clean bust silhouette standing in for Aaron's mid-shot. Deliberately
-    flat and featureless — it marks talent blocking, it is not a likeness."""
+    """Aaron composited from a frame of a published episode. Mockup stand-in
+    only — the shipping thumbnail should use a frame from THIS episode."""
+    import os
+    if os.path.exists("aaron-cutout.png"):
+        w = int(h * 321 / 437)
+        return (f'<div class="subj" style="left:{left}px;">'
+                f'<img src="aaron-cutout.png" width="{w}" height="{h}"></div>')
+    # Fallback: flat bust silhouette if no cutout is available.
     w = int(h * 380 / 520)
     svg = f'''<svg width="{w}" height="{h}" viewBox="0 0 380 520">
   <circle cx="190" cy="128" r="82" fill="{tone}"/>
