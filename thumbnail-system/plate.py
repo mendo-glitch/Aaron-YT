@@ -64,3 +64,18 @@ def photo_page(body, extra_css=""):
 .head{{text-shadow:0 12px 34px rgba(0,0,0,.62),0 4px 12px rgba(0,0,0,.5);}}
 {extra_css}</style></head>
 <body><div class="frame"><img class="plate" src="plate-photo.png">{body}</div></body></html>'''
+
+
+def graphics_page(body, extra_css=""):
+    """Graphics only, transparent ground — for compositing in an NLE.
+
+    Keeps the drop shadows: they are what holds white type over a light wall,
+    and they are painful to re-add downstream.
+    """
+    return f'''<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><style>
+html,body{{background:transparent!important;}}
+.frame{{background:transparent!important;}}
+.head{{text-shadow:0 12px 34px rgba(0,0,0,.62),0 4px 12px rgba(0,0,0,.5);}}
+{extra_css}</style></head>
+<body><div class="frame">{body}</div></body></html>'''
