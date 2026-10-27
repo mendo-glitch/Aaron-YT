@@ -6,7 +6,7 @@ set -e
 cd "$(dirname "$0")"
 for f in "$@"; do
   n="${f%.html}"
-  /opt/pw-browsers/chromium-1194/chrome-linux/chrome --headless --disable-gpu --no-sandbox \
+  "$(node -e "process.stdout.write(require('playwright').chromium.executablePath())")" --headless --disable-gpu --no-sandbox \
     --hide-scrollbars --force-device-scale-factor=1.5 --window-size=1280,900 \
     --default-background-color=00000000 \
     --screenshot="$n.raw.png" "$f" 2>/dev/null | tail -0

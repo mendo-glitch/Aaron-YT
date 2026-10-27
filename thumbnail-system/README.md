@@ -48,7 +48,12 @@ off-brand.
 ./fetch-fonts.sh          # Archivo Black, Anton, Archivo 900, Inter 900 (OFL)
 python3 proof.py          # emit HTML for the concepts
 ./render.sh proof.html    # -> proof.png at exactly 1280x720
+node build-docx.js ep3.json   # -> ../<outName>.docx from an episode config
 ```
+
+An episode is a JSON config (`ep1.json`, `ep2.json`, `ep3.json`) beside its
+rendered `thumb-*.png` files: titles, captions, description, tags file, output
+name. The builder takes no other input.
 
 `render.sh` oversizes the Chromium window to 1280×900 and crops to 720. Headless
 Chromium returns a viewport short of the requested height, which otherwise leaves
